@@ -1,25 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name="description" content="Tizen Wearable Web Basic Watch Face" />
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="description" content="Tizen Wearable Web Basic Watch Face" />
 
-    <title>Basic Watch</title>
+		<title>Basic Watch</title>
 
-    <link rel="stylesheet" type="text/css" href="main.css" />
-</head>
+		<link rel="stylesheet" type="text/css" href="main.css" />
+	</head>
 
-<body>
-	<div id="dom" class="center">0</div>
+	<body>
+		<div id="dom" class="center">0</div>
 
-	<div class="hand" id="hand-hour"></div>
-    <div class="hand" id="hand-minute"></div>
-    <div class="hand" id="hand-second"></div>
-    
-    <div class="timer"></div>
-    
-    <!-- <div>
+		<div class="hand" id="hand-hour"></div>
+		<div class="hand" id="hand-minute"></div>
+		<div class="hand" id="hand-second"></div>
+
+		<div class="timer"></div>
+
+		<!-- <div>
     	<div><img src="icons/moon.png" class="icon" /> 0&deg;
     		(<img src="icons/drop.png" class="icon" /> 0&deg;)</div>
     	<div><img src="icons/drop.png" class="icon" /> 0% (0g/kg)</div>
@@ -30,27 +30,22 @@
     	<div><img src="icons/foot.png" class="icon" /> <span id="step-count">0 steps</span></div>
     	<div><img src="icons/up.png" class="icon" /> 0m</div>
     </div> -->
-    
-    <svg id="text" viewBox="0 0 360 360" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <path
-        id="curve"
-        d="M 180 180
+
+		<svg id="text" viewBox="0 0 360 360" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<path
+				id="curve"
+				d="M 180 180
 m 180, 0
 a 180,180 0 1,0 -360,0
-a 180,180 0 1,0 360,0" fill="transparent"
-        style="transform-origin: 180px 180px; transform: rotate(-0.25turn)"
-    />
-    <text>
-        <textPath
-            startOffset="50%"
-            style="text-anchor: middle"
-            xlink:href="#curve"
-            id="batt"
-        >--
-        </textPath>
-    </text>
-</svg>
-    
-    <script src="main.js"></script>
-</body>
+a 180,180 0 1,0 360,0"
+				fill="transparent"
+				style="transform-origin: 180px 180px; transform: rotate(-0.25turn)"
+			/>
+			<text>
+				<textPath startOffset="50%" style="text-anchor: middle" xlink:href="#curve" id="batt">--</textPath>
+			</text>
+		</svg>
+
+		<script src="main.js"></script>
+	</body>
 </html>
