@@ -1,1 +1,3 @@
 *.wgt
+.settings
+.sign

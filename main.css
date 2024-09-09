@@ -9,23 +9,27 @@ html, body {
     overflow: hidden;
     background: black;
     font-family: sans-serif;
-    font-size: 8vh;
+    font-size: 8vw;
 	color: white;
+}
+
+text {
+	fill: white;
 }
 
 #dom {
 	color: #444;
-	font-size: 85vh;
+	font-size: 85vw;
 }
 
 .hand {
     position: absolute;
-    left: calc(50vw - 2.5vh);
+    left: calc(50vw - 2.5vw);
     top: 0;
-	width: 5vh;
-    height: 50vh;
-    /* border-radius: 5vh; */
-    transform-origin: 2.5vh calc(50vh - 2.5vh);
+	width: 5vw;
+    height: calc(50vw + 2.5vw);
+    /* border-radius: 5vw; */
+    transform-origin: 2.5vw 50vw;
     background: red;
     
     /* sadness: these aren't supported */
@@ -34,18 +38,18 @@ html, body {
 }
 
 #hand-hour {
-    top: 25vh;
-    height: 25vh;
-    transform-origin: 2.5vh calc(25vh - 2.5vh);
+    top: 25vw;
+    height: calc(25vw + 2.5vw);
+    transform-origin: 2.5vw 25vw;
 }
 
 #hand-minute {
-	height: 25vh;
+	height: 25vw;
 }
 
 #hand-second {
-	height: 5vh;
-    border-radius: 5vh;
+	height: 5vw;
+    border-radius: 5vw;
 }
 
 .center {
@@ -59,10 +63,14 @@ html, body {
 	height: fit-content;
 }
 
-#text > div {
-	display: flex;
+#text {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 360px;
+	height: 360px;
 }
 
 .icon {
-	height: 8vh;
+	height: 8vw;
 }

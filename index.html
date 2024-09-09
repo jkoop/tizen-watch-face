@@ -7,7 +7,7 @@
 
     <title>Basic Watch</title>
 
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 
 <body>
@@ -19,8 +19,7 @@
     
     <div class="timer"></div>
     
-    <div id="text" class="center">
-    	<!--
+    <!-- <div>
     	<div><img src="icons/moon.png" class="icon" /> 0&deg;
     		(<img src="icons/drop.png" class="icon" /> 0&deg;)</div>
     	<div><img src="icons/drop.png" class="icon" /> 0% (0g/kg)</div>
@@ -28,12 +27,29 @@
     	<div><img src="icons/gauge.png" class="icon" /> 0hPa
     		<img src="icons/trending-down.png" class="icon" /> [0]</div>
     	<div><img src="icons/heart.png" class="icon" /> 0 BPM</div>
-    	-->
     	<div><img src="icons/foot.png" class="icon" /> <span id="step-count">0 steps</span></div>
-    	<!--
     	<div><img src="icons/up.png" class="icon" /> 0m</div>
-    	-->
-    </div>
+    </div> -->
+    
+    <svg id="text" viewBox="0 0 360 360" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <path
+        id="curve"
+        d="M 180 180
+m 180, 0
+a 180,180 0 1,0 -360,0
+a 180,180 0 1,0 360,0" fill="transparent"
+        style="transform-origin: 180px 180px; transform: rotate(-0.25turn)"
+    />
+    <text>
+        <textPath
+            startOffset="50%"
+            style="text-anchor: middle"
+            xlink:href="#curve"
+            id="batt"
+        >--
+        </textPath>
+    </text>
+</svg>
     
     <script src="main.js"></script>
 </body>
