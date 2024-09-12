@@ -16,7 +16,8 @@
 	}
 
 	// set the text of stuff and rotate things
-	function draw() {
+	function draw(force = false) {
+		if (document.hidden && !force) return;
 		document.getElementById('dom').innerText = dom;
 		rotateElement('hand-hour', hourAngle);
 		rotateElement('hand-minute', minuteAngle);
@@ -64,9 +65,7 @@
 	function init() {
 		// update the screen immediately when the device wakes up
 		document.addEventListener('visibilitychange', function () {
-			if (!document.hidden) {
-				updateTime();
-			}
+			draw(true);
 		});
 
 		try {
